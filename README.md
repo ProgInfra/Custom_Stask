@@ -13,6 +13,7 @@
   - [How to add new Stack](#how-to-add-new-stack)
   - [Stacks](#stacks)
   - [Documentations](#documentations)
+  - [Resources](#resources)
   - [Licence](#licence)
 
 ## Description
@@ -21,29 +22,40 @@
 
 ## Getting Started
 
-TODO
+1) TODO
 
 ## How to add new Stack
 
-TODO
+1) TODO
 
 ## Stacks
 
-- **[Access](./stacks/access/README.md)** : TODO
-- **[Backup](./stacks/backup/README.md)** : TODO
-- **[Development](./stacks/development/README.md)** : TODO
-- **[Download](./stacks/download/README.md)** : TODO
-- **[Game](./stacks/game/README.md)** : TODO
-- **[Management](./stacks/management/README.md)** : TODO
-- **[Media](./stacks/media/README.md)** : TODO
-- **[Monitoring](./stacks/monitoring/README.md)** : TODO
-- **[Security](./stacks/security/README.md)** : TODO
-- **[Storage](./stacks/storage/README.md)** : TODO
-- **[Utility](./stacks/utility/README.md)** : TODO
+- **[Access](./stacks/access/README.md)** : VPN and applications portal
+- **[Backup](./stacks/backup/README.md)** : Volumes, Database and Files Backups
+- **[Development](./stacks/development/README.md)** : Development tools
+- **[Download](./stacks/download/README.md)** : Download services
+- **[Game](./stacks/game/README.md)** : Game Servers
+- **[Management](./stacks/management/README.md)** : Management services
+- **[Media](./stacks/media/README.md)** : Media services
+- **[Miscellaneous](./stacks/miscellaneous/README.md)** : Other services
+- **[Monitoring](./stacks/monitoring/README.md)** : Monitoring and alerting services
+- **[Security](./stacks/security/README.md)** : Security and Auth services
+- **[Storage](./stacks/storage/README.md)** : Storage and shares services
+- **[Utility](./stacks/utility/README.md)** : Utility services
 
 ## Documentations
 
 - [Ideas](./docs/ideas.md)
+
+## Resources
+
+- [Awesome Docker](https://github.com/veggiemonk/awesome-docker#container-operations) : Tools for Docker
+- [Awesome Stacks](https://github.com/ethibox/awesome-stacks) : Stack already available
+- [Awesome Self Hosted](https://github.com/awesome-selfhosted/awesome-selfhosted) : List of Self Hosted Services
+- [Awesome SysAdmin](https://github.com/awesome-foss/awesome-sysadmin) :
+  - [Awesome SysAdmin Backup](https://github.com/awesome-foss/awesome-sysadmin#backups)
+- [Linuxserver.io](https://www.linuxserver.io/) : Great Community Images
+- [Blackfish](https://gitlab.com/blackfish/blackfish) : CoreOS VM to build swarm clusters for Dev and Production
 
 ## Licence
 
