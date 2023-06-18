@@ -1,18 +1,28 @@
 image: node:18-bullseye-slim
 
 stages:
+    - install
     - check
     - build
     - deploy
 
+install:
+    stage: install
+    script:
+        - npm install
+
 check:
     stage: check
+    dependencies:
+        - install
     script:
         - npm run formatter
         - npm run validate_apps
 
 build:
     stage: build
+    dependencies:
+        - check
     script:
         - npm run build
 
