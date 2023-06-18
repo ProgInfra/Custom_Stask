@@ -1,2 +1,6 @@
 # Temporary Folder
 tmp
+
+# Node JS
+dist
+node_modules

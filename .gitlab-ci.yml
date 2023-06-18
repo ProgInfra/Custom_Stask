@@ -1,0 +1,29 @@
+image: node:18-bullseye-slim
+
+stages:
+    - check
+    - build
+    - deploy
+
+check:
+    stage: check
+    script:
+        - npm run formatter
+        - npm run validate_apps
+
+build:
+    stage: build
+    script:
+        - npm run build
+
+pages:
+    stage: deploy
+    dependencies:
+        - build
+    script:
+        - mv dist/ public/
+    artifacts:
+        paths:
+            - public
+    only:
+        - main

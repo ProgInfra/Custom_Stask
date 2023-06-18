@@ -10,10 +10,10 @@
   - [Table Of Contents](#table-of-contents)
   - [Description](#description)
   - [Getting Started](#getting-started)
-  - [How to add new Stack](#how-to-add-new-stack)
   - [Stacks](#stacks)
   - [Documentations](#documentations)
   - [Resources](#resources)
+  - [Development](#development)
   - [Licence](#licence)
 
 ## Description
@@ -22,11 +22,10 @@
 
 ## Getting Started
 
-1) TODO
-
-## How to add new Stack
-
-1) TODO
+1) Login to your CapRover dashboard
+2) Go to **apps** and click on **One-Click Apps/Databases** and go to the bottom
+3) Under **3rd party repositories:** copy  the URL, (for example: `https://proginfra.gitlab.io/custom_stack`) and paste it in to the text box
+4) Click the **_Connect New Repository_** button
 
 ## Stacks
 
@@ -46,6 +45,7 @@
 ## Documentations
 
 - [Ideas](./docs/ideas.md)
+- [CapRover One Click Apps](./docs/caprover.md)
 
 ## Resources
 
@@ -56,6 +56,18 @@
   - [Awesome SysAdmin Backup](https://github.com/awesome-foss/awesome-sysadmin#backups)
 - [Linuxserver.io](https://www.linuxserver.io/) : Great Community Images
 - [Blackfish](https://gitlab.com/blackfish/blackfish) : CoreOS VM to build swarm clusters for Dev and Production
+
+## Development
+
+**Requirements** : Docker and Make
+
+You can use this [documentation](./docs/caprover.md) to develop new app in this repository for CapRover and there are some commands :
+
+- `make check` : Overall command to check the repository and build the package
+- `make install` : Install NPM package
+- `make format` : Format apps in public folder
+- `make validate` : Validate apps in public folder
+- `make build` : Build the final package
 
 ## Licence
 

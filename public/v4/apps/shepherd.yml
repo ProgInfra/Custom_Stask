@@ -1,0 +1,24 @@
+captainVersion: 4
+services:
+    $$cap_appname:
+        image: mazzolino/shepherd:$$cap_shepherd_version
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock:ro
+        restart: unless-stopped
+        caproverExtra:
+            notExposeAsWebApp: true
+caproverOneClickApp:
+    displayName: Shepherd
+    isOfficial: false
+    description: A Docker swarm service for automatically updating your services whenever their base image is refreshed.
+    documentation: Taken from https://hub.docker.com/r/mazzolino/shepherd - https://github.com/containrrr/shepherd
+    instructions:
+        start: >-
+            Shepherd is a service that update your other services when they have "latest" as version tag.
+        end: >-
+            Nothing to do, Shepherd will update your services when it's possible.
+    variables:
+        - id: $$cap_shepherd_version
+          label: Shepherd Version
+          defaultValue: pr-100
+          validRegex: /^(pr-[0-9]+)|(latest)$/
