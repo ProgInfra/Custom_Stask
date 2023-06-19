@@ -3,7 +3,7 @@ const path = require('path');
 const yaml = require('yaml');
 const fs = require('fs-extra');
 
-const pathOfPublic = path.join(__dirname, '..', `public`);
+const pathOfPublic = path.join(__dirname, '..', `src`);
 
 const pathOfDist = path.join(__dirname, '..', `dist`);
 

@@ -16,7 +16,7 @@ const fs = require('fs-extra');
 // 4- Update readme!!!!
 // 5- Push all 3 steps above at the same time to GITHUB
 
-const pathOfPublic = path.join(__dirname, '..', `public`);
+const pathOfPublic = path.join(__dirname, '..', `src`);
 
 const pathOfDist = path.join(__dirname, '..', `dist`);
 
