@@ -17,7 +17,9 @@ Volumes, Database and Files Backups.
 
 ## Services
 
-- Nothing.
+- [X] [Duplicati](https://www.duplicati.com/) (Official) : Global Backup software.
+- [X] [Syncthing](https://syncthing.net/) (Official) : Cloud Sync Management.
+- [X] [Offen Docker Volume Backup](https://github.com/offen/docker-volume-backup) (Official) : Backup Docker volumes locally.
 
 ## Documentations
 

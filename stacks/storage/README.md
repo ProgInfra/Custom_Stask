@@ -17,7 +17,7 @@ Storage and shares services.
 
 ## Services
 
-- Nothing.
+- [X] [Minio](https://min.io/) (Official) : Multi-Cloud Object Storage (S3 API Compatible).
 
 ## Documentations
 

@@ -1,0 +1,76 @@
+captainVersion: 4
+services:
+    $$cap_appname:
+        image: haugene/transmission-openvpn:$$cap_transmission_openvpn_version
+        environment:
+            TZ: $$cap_transmission_openvpn_tz
+            PUID: $$cap_transmission_openvpn_puid
+            PGID: $$cap_transmission_openvpn_pgid
+            LOCAL_NETWORK: $$cap_transmission_openvpn_local_net
+            OPENVPN_PROVIDER: $$cap_transmission_openvpn_provider
+            OPENVPN_USERNAME: $$cap_transmission_openvpn_username
+            OPENVPN_PASSWORD: $$cap_transmission_openvpn_password
+            TRANSMISSION_WEB_UI: $$cap_transmission_openvpn_web_ui
+        volumes:
+            - $$cap_appname-config:/config:rw
+            - $$cap_appname-data:/data:rw
+        caproverExtra:
+            containerHttpPort: "9091"
+        cap_add:
+            - NET_ADMIN
+caproverOneClickApp:
+    displayName: Transmission OpenVPN
+    isOfficial: true
+    description: Docker container running Transmission torrent client with WebUI over an OpenVPN tunnel.
+    documentation: Taken from https://haugene.github.io/docker-transmission-openvpn/ - https://github.com/haugene/docker-transmission-openvpn
+    instructions:
+        start: |-
+            Transmission OpenVPN is a service that give you a web transmission torrent client with VPN.
+        end: |-
+            Now you have to customize your environment variable to add your VPN credentials.
+            See here to have the list of supported VPN providers : https://haugene.github.io/docker-transmission-openvpn/supported-providers/
+            See here to have specific VPN provider settings : https://haugene.github.io/docker-transmission-openvpn/provider-specific/
+            See here to have all configuration options available : https://haugene.github.io/docker-transmission-openvpn/config-options/
+    variables:
+        - id: $$cap_transmission_openvpn_version
+          label: Transmission OpenVPN Version
+          defaultValue: 5
+          description: Check out their Docker page for the valid tags https://hub.docker.com/r/haugene/transmission-openvpn/tags
+          validRegex: /^([0-9]+.*[0-9]*)|(latest)|(master)|(edge)|(dev)$/
+        - id: $$cap_transmission_openvpn_tz
+          label: Time Zone
+          defaultValue: Europe/Paris
+          description: Get yours from https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+          validRegex: "/.{1,}/"
+        - id: $$cap_transmission_openvpn_puid
+          label: PUID
+          defaultValue: "1000"
+          description: Select the user ID you want to define permissions
+          validRegex: /^[0-9]+$/
+        - id: $$cap_transmission_openvpn_pgid
+          label: PGID
+          defaultValue: "1000"
+          description: Select the group ID you want to define permissions
+          validRegex: /^[0-9]+$/
+        - id: $$cap_transmission_openvpn_local_net
+          label: Local Network
+          defaultValue: "192.168.1.0/24"
+          description: Setup your home local network
+          validRegex: /^[0-9]+.[0-9]+.[0-9]+.[0-9]+\/[0-9]+$/
+        - id: $$cap_transmission_openvpn_provider
+          label: OpenVPN Provider
+          defaultValue: "NORDVPN"
+          description: The VPN provider you want to use.
+        - id: $$cap_transmission_openvpn_username
+          label: OpenVPN Username
+          defaultValue: ""
+          description: Your VPN username credential.
+        - id: $$cap_transmission_openvpn_password
+          label: OpenVPN Password
+          defaultValue: ""
+          description: Your VPN password credential.
+        - id: $$cap_transmission_openvpn_web_ui
+          label: Alternative Web UI
+          defaultValue: ""
+          description: Choose if you want an alternative web UI
+          validRegex: /^(combustion)|(kettu)|(transmission-web-control)|(flood-for-transmission)|(shift)|$/

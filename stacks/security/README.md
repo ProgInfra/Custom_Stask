@@ -17,7 +17,9 @@ Security and Auth services.
 
 ## Services
 
-- Nothing.
+- [X] [Vaultwarden](https://github.com/dani-garcia/vaultwarden) (Official) : Alternative of Bitwarden server in Rust compatible with Bitwarden clients.
+- [X] [Keycloak](https://www.keycloak.org/) (Official) : Open Source Identity and Access Management.
+- [X] [Passbolt](https://www.passbolt.com/) (Official) : Open Source Password Manager for teams.
 
 ## Documentations
 

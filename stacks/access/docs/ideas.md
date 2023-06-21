@@ -17,11 +17,8 @@
 ## Service Ideas
 
 - [Traefik Proxy V2](https://traefik.io/traefik/) : Cloud Native Application Proxy.
-- [Heimdall](https://heimdall.site/) : Applications Dashboard.
-- [Organizr](https://organizr.app/) : Services portal.
-- [Dashy](https://dashy.to/) : Ultimate Homepage for Homelab.
 - [Pi-Hole](https://pi-hole.net/) : Network-wide Ad Blocking.
-- [AdGuard Home](https://adguard.com/en/adguard-home/overview.html) : Blocker of ads and tracking (DNS and DHCP Server).
+- [Pi.Alert](https://github.com/pucherot/Pi.Alert) : Scan devices connected and throw alert for unknown devices.
 - [Tailscale](https://tailscale.com/) : Secure remote access to shared resources (use of Wireguard).
 - [Headscale](https://github.com/juanfont/headscale) : Open Source Tailscale control server.
 - [Headscale WEBUI](https://github.com/ifargle/headscale-webui) : Headscale web ui.
@@ -32,7 +29,5 @@
 - [WG UI](https://github.com/EmbarkStudios/wg-ui) : Basic WireGuard web UI.
 - [WireGuard-UI](https://github.com/ngoduykhanh/wireguard-ui) : WireGuard web UI.
 - [Mistborn](https://gitlab.com/cyber5k/mistborn) : WireGuard and Firewall Management.
-- [Pi-Hole](https://pi-hole.net/) : Network-wide Ad Blocking.
-- [Pi.Alert](https://github.com/pucherot/Pi.Alert) : Scan devices connected and throw alert for unknown devices.
 - [Speedtest Tracker](https://github.com/henrywhitaker3/Speedtest-Tracker) : Monitoring Speed Test each hours.
 - [Netmaker](https://www.netmaker.io/) : Network conception and management.

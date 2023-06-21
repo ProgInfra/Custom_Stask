@@ -18,9 +18,7 @@
 
 ## Service Ideas
 
-- [Duplicati](https://www.duplicati.com/) : Global Backup software.
 - [Rclone](https://rclone.org/gui/) : Manage file and Cloud storage.
-- [Syncthing](https://syncthing.net/) : Cloud Sync Management.
 - [Docker DB Backup](https://github.com/tiredofit/docker-db-backup) : Auto Backup multiple types of Databases.
 - [Docker Volume Backup](https://github.com/jareware/docker-volume-backup) : Auto Backup Docker Volumes.
 - [Volumerize](https://github.com/blacklabelops/volumerize) : Auto Backup Docker Volumes.

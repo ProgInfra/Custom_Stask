@@ -1,0 +1,31 @@
+captainVersion: 4
+services:
+    $$cap_appname:
+        image: b4bz/homer:$$cap_homer_version
+        environment:
+            INIT_ASSETS: "$$cap_homer_init_assets"
+        volumes:
+            - $$cap_appname-assets:/www/assets:rw
+        caproverExtra:
+            containerHttpPort: "8080"
+caproverOneClickApp:
+    displayName: Homer
+    isOfficial: true
+    description: A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.
+    documentation: Taken from https://hub.docker.com/r/b4bz/homer - https://github.com/bastienwirtz/homer
+    instructions:
+        start: |-
+            Homer is a service that give you a web application with a static homepage to register your applications.
+        end: |-
+            Nothing to do, Homer has been successfully deployed, you can now edit your assets folder to configure Homer.
+    variables:
+        - id: $$cap_homer_version
+          label: Homer Version
+          defaultValue: v23.05.1
+          description: Check out their Docker page for the valid tags https://hub.docker.com/r/b4bz/homer/tags
+          validRegex: /^(v[0-9]+.[0-9]+.[0-9]+)|(latest)$/
+        - id: $$cap_homer_init_assets
+          label: Init Assets
+          defaultValue: 1
+          description: Install example of configuration file and assets to help you get started
+          validRegex: "/^1|0$/"

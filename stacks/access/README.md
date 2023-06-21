@@ -17,7 +17,12 @@ VPN and applications portal.
 
 ## Services
 
-- Nothing.
+- [X] [Heimdall](https://heimdall.site/) (Official) : Applications Dashboard.
+- [X] [Organizr](https://organizr.app/) (Official) : Services portal.
+- [X] [AdGuard Home](https://adguard.com/en/adguard-home/overview.html) (Official) : Blocker of ads and tracking (DNS and DHCP Server).
+- [X] [Homarr](https://github.com/ajnart/homarr) (Official) : Simple Dashboard for server services.
+- [X] [Homer](https://github.com/bastienwirtz/homer) (Custom) : A dead simple static homepage for your server.
+- [ ] [Dashy](https://dashy.to/) (Custom) : Ultimate Homepage for Homelab.
 
 ## Documentations
 

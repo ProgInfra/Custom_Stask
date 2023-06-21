@@ -2,23 +2,41 @@ captainVersion: 4
 services:
     $$cap_appname:
         image: mazzolino/shepherd:$$cap_shepherd_version
+        environment:
+            TZ: "$$cap_shepherd_tz"
+            SLEEP_TIME: "$$cap_shepherd_sleep_time"
+            IGNORELIST_SERVICES: "$$cap_shepherd_ignorelist_services"
         volumes:
-            - /var/run/docker.sock:/var/run/docker.sock:ro
-        restart: unless-stopped
+            - /var/run/docker.sock:/var/run/docker.sock:rw
         caproverExtra:
             notExposeAsWebApp: true
 caproverOneClickApp:
     displayName: Shepherd
-    isOfficial: false
+    isOfficial: true
     description: A Docker swarm service for automatically updating your services whenever their base image is refreshed.
     documentation: Taken from https://hub.docker.com/r/mazzolino/shepherd - https://github.com/containrrr/shepherd
     instructions:
-        start: >-
+        start: |-
             Shepherd is a service that update your other services when they have "latest" as version tag.
-        end: >-
+        end: |-
             Nothing to do, Shepherd will update your services when it's possible.
     variables:
         - id: $$cap_shepherd_version
           label: Shepherd Version
           defaultValue: pr-100
+          description: Check out their Docker page for the valid tags https://hub.docker.com/r/mazzolino/shepherd/tags
           validRegex: /^(pr-[0-9]+)|(latest)$/
+        - id: $$cap_shepherd_tz
+          label: Time Zone
+          defaultValue: Europe/Paris
+          description: Get yours from https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+          validRegex: "/.{1,}/"
+        - id: $$cap_shepherd_sleep_time
+          label: Sleep Time
+          defaultValue: 5min
+          description: Sleep time in min between check for update
+          validRegex: "/^[0-9]+min$/"
+        - id: $$cap_shepherd_ignorelist_services
+          label: Ignore List Services
+          defaultValue: captain-captain captain-certbot captain-nginx
+          description: Space-separated list of service names that don't need to be updated (by default we ignore each caprover main services to avoid auto update of them)
