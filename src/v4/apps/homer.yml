@@ -3,11 +3,11 @@ services:
     $$cap_appname:
         image: b4bz/homer:$$cap_homer_version
         environment:
-            INIT_ASSETS: "$$cap_homer_init_assets"
+            INIT_ASSETS: '$$cap_homer_init_assets'
         volumes:
             - $$cap_appname-assets:/www/assets:rw
         caproverExtra:
-            containerHttpPort: "8080"
+            containerHttpPort: '8080'
 caproverOneClickApp:
     displayName: Homer
     isOfficial: true
@@ -28,4 +28,4 @@ caproverOneClickApp:
           label: Init Assets
           defaultValue: 1
           description: Install example of configuration file and assets to help you get started
-          validRegex: "/^1|0$/"
+          validRegex: '/^1|0$/'

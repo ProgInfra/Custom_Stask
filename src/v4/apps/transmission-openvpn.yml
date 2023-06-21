@@ -15,7 +15,7 @@ services:
             - $$cap_appname-config:/config:rw
             - $$cap_appname-data:/data:rw
         caproverExtra:
-            containerHttpPort: "9091"
+            containerHttpPort: '9091'
         cap_add:
             - NET_ADMIN
 caproverOneClickApp:
@@ -41,36 +41,36 @@ caproverOneClickApp:
           label: Time Zone
           defaultValue: Europe/Paris
           description: Get yours from https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-          validRegex: "/.{1,}/"
+          validRegex: '/.{1,}/'
         - id: $$cap_transmission_openvpn_puid
           label: PUID
-          defaultValue: "1000"
+          defaultValue: '1000'
           description: Select the user ID you want to define permissions
           validRegex: /^[0-9]+$/
         - id: $$cap_transmission_openvpn_pgid
           label: PGID
-          defaultValue: "1000"
+          defaultValue: '1000'
           description: Select the group ID you want to define permissions
           validRegex: /^[0-9]+$/
         - id: $$cap_transmission_openvpn_local_net
           label: Local Network
-          defaultValue: "192.168.1.0/24"
+          defaultValue: '192.168.1.0/24'
           description: Setup your home local network
           validRegex: /^[0-9]+.[0-9]+.[0-9]+.[0-9]+\/[0-9]+$/
         - id: $$cap_transmission_openvpn_provider
           label: OpenVPN Provider
-          defaultValue: "NORDVPN"
+          defaultValue: 'NORDVPN'
           description: The VPN provider you want to use.
         - id: $$cap_transmission_openvpn_username
           label: OpenVPN Username
-          defaultValue: ""
+          defaultValue: ''
           description: Your VPN username credential.
         - id: $$cap_transmission_openvpn_password
           label: OpenVPN Password
-          defaultValue: ""
+          defaultValue: ''
           description: Your VPN password credential.
         - id: $$cap_transmission_openvpn_web_ui
           label: Alternative Web UI
-          defaultValue: ""
+          defaultValue: ''
           description: Choose if you want an alternative web UI
           validRegex: /^(combustion)|(kettu)|(transmission-web-control)|(flood-for-transmission)|(shift)|$/
