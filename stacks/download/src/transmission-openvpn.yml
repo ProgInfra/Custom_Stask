@@ -1,1 +1,30 @@
-# TODO
+---
+name: transmission-openvpn
+
+volumes:
+    transmission-openvpn-config:
+        name: transmission-openvpn-config
+
+services:
+    transmission-openvpn:
+        container_name: transmission-openvpn
+        image: haugene/transmission-openvpn:latest
+        cap_add:
+            - NET_ADMIN
+        volumes:
+            - transmission-openvpn-config:/config:rw
+            - ./downloads:/data:rw
+        environment:
+            - TZ=Europe/Paris
+            - PUID=1000
+            - PGID=1000
+            - LOCAL_NETWORK=192.168.1.0/24
+            - OPENVPN_PROVIDER=NORDVPN
+            - OPENVPN_USERNAME=TODO
+            - OPENVPN_PASSWORD=TODO
+            - NORDVPN_COUNTRY=FR
+            - NORDVPN_CATEGORY=legacy_p2p
+            - TRANSMISSION_WEB_UI=transmission-web-control
+        ports:
+            - 9091:9091
+        restart: always
