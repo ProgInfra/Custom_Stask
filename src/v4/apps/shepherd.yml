@@ -3,9 +3,9 @@ services:
     $$cap_appname:
         image: mazzolino/shepherd:$$cap_shepherd_version
         environment:
-            TZ: "$$cap_shepherd_tz"
-            SLEEP_TIME: "$$cap_shepherd_sleep_time"
-            IGNORELIST_SERVICES: "$$cap_shepherd_ignorelist_services"
+            TZ: '$$cap_shepherd_tz'
+            SLEEP_TIME: '$$cap_shepherd_sleep_time'
+            IGNORELIST_SERVICES: '$$cap_shepherd_ignorelist_services'
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock:rw
         caproverExtra:
@@ -30,12 +30,12 @@ caproverOneClickApp:
           label: Time Zone
           defaultValue: Europe/Paris
           description: Get yours from https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-          validRegex: "/.{1,}/"
+          validRegex: '/.{1,}/'
         - id: $$cap_shepherd_sleep_time
           label: Sleep Time
           defaultValue: 5m
           description: Sleep time in min between check for update
-          validRegex: "/^[0-9]+m$/"
+          validRegex: '/^[0-9]+m$/'
         - id: $$cap_shepherd_ignorelist_services
           label: Ignore List Services
           defaultValue: captain-captain captain-certbot captain-nginx

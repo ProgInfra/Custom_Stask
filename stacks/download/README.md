@@ -17,7 +17,8 @@ Download services.
 
 ## Services
 
-- [TEST] [Transmission OpenVPN](https://haugene.github.io/docker-transmission-openvpn/) (Custom) : Transmission with VPN support and an advanced functions.
+- [ERROR] [Transmission OpenVPN](https://haugene.github.io/docker-transmission-openvpn/) (Custom) : Transmission with VPN support and an advanced functions.
+  - Problem with `cap_add` option that is not permitted ! Need CapRover upgrade
 - [ ] [Tdarr](https://home.tdarr.io/) (Custom) : Distributed Transcoding System.
 - [X] [pyLoad](https://pyload.net/) (Official) : Great Download Manager.
 - [X] [Radarr](https://github.com/Radarr/Radarr) (Official) : Fork of Sonarr but for Movies Auto Downloader.
