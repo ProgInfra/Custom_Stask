@@ -18,9 +18,6 @@ services:
             containerHttpPort: '9091'
         cap_add:
             - NET_ADMIN
-TaskTemplate:
-    ContainerSpec:
-        CapabilityAdd: ['CAP_NET_ADMIN']
 caproverOneClickApp:
     displayName: Transmission OpenVPN
     isOfficial: true
@@ -29,12 +26,17 @@ caproverOneClickApp:
     instructions:
         start: |-
             Transmission OpenVPN is a service that give you a web transmission torrent client with VPN.
+
+            **Important notes:**
+            - If you are using CapRover version `1.10.1` or older, you will need to **override CapRover's configuration** to use the newer Docker API version `1.4.1` (this can be done manually or by running `echo "{\"dockerApiVersion\":\"v1.41\"}" > /captain/data/config-override.json`)
         end: |-
             Before you start Transmission, you have to add the CAP ADD option with this command : docker service update --cap-add NET_ADMIN $$cap_appname
-            Now you have to customize your environment variable to add your VPN credentials.
-            See here to have the list of supported VPN providers : https://haugene.github.io/docker-transmission-openvpn/supported-providers/
-            See here to have specific VPN provider settings : https://haugene.github.io/docker-transmission-openvpn/provider-specific/
-            See here to have all configuration options available : https://haugene.github.io/docker-transmission-openvpn/config-options/
+
+            - Now you have to customize your environment variable to add your VPN credentials.
+            - See here to have the list of supported VPN providers : https://haugene.github.io/docker-transmission-openvpn/supported-providers/
+            - See here to have specific VPN provider settings : https://haugene.github.io/docker-transmission-openvpn/provider-specific/
+            - See here to have all configuration options available : https://haugene.github.io/docker-transmission-openvpn/config-options/
+            - Go to **App Configs** and paste the following snippet into **Service Update Override**: `{ "TaskTemplate": { "ContainerSpec": { "CapabilityAdd": ["CAP_NET_ADMIN"] } } }`
     variables:
         - id: $$cap_transmission_openvpn_version
           label: Transmission OpenVPN Version

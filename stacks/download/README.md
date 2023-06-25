@@ -17,7 +17,7 @@ Download services.
 
 ## Services
 
-- [ERROR] [Transmission OpenVPN](https://haugene.github.io/docker-transmission-openvpn/) (Custom) : Transmission with VPN support and an advanced functions.
+- [X] [Transmission OpenVPN](https://haugene.github.io/docker-transmission-openvpn/) (Custom) : Transmission with VPN support and an advanced functions.
   - Problem with `cap_add` option that is not permitted ! Need CapRover upgrade
 - [ ] [Tdarr](https://home.tdarr.io/) (Custom) : Distributed Transcoding System.
 - [X] [pyLoad](https://pyload.net/) (Official) : Great Download Manager.
