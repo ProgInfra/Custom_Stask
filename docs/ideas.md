@@ -10,4 +10,6 @@
 
 ## Ideas
 
-- Nothing.
+- CapRover Upgrade :
+  - Replace of NGINX and Certbot by Traefik
+  - Template version 5 (Docker Compose and extra args can be in template)
