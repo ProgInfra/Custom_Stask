@@ -23,6 +23,7 @@ VPN and applications portal.
 - [X] [Homarr](https://github.com/ajnart/homarr) (Official) : Simple Dashboard for server services.
 - [TEST] [Homer](https://github.com/bastienwirtz/homer) (Custom) : A dead simple static homepage for your server.
 - [ ] [Dashy](https://dashy.to/) (Custom) : Ultimate Homepage for Homelab.
+- [ ] [WireGuard Easy](https://github.com/wg-easy/wg-easy) : All In One WireGuard and Web GUI to manage VPN.
 
 ## Documentations
 
